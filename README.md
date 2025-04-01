@@ -6,6 +6,7 @@ Google Cybersecurity Professional Certificate Portfolio Activity
 I am a cybersecurity analyst working at a company that specializes in providing IT services for clients. Several customers of clients reported that they were not able to access the client company website www.yummyrecipesforme.com, and saw the error “destination port unreachable” after waiting for the page to load. 
 
 I am tasked with analyzing the situation and determining which network protocol was affected during this incident. First, I attempted to visit the website and received the error “destination port unreachable.” To troubleshoot the issue, I loaded my network analyzer tool, tcpdump, and attempted to load the webpage again. To load the webpage, my browser sends a query to a DNS server via the UDP protocol to retrieve the IP address for the website's domain name; this is part of the DNS protocol. My browser then uses this IP address as the destination IP for sending an HTTPS request to the web server to display the webpage. The analyzer shows that when you send UDP packets to the DNS server, you receive ICMP packets containing the error message: “udp port 53 unreachable.” 
+![Network Analyzer Picture](network-analyzer.png)
 
 log from tcpdump packet data
 In the tcpdump log, I find the following information:
